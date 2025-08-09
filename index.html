@@ -14,17 +14,34 @@
             line-height: 1.6;
         }
         header {
-            background-color: #a8c3b8;
-            color: white;
+            position: relative;
             text-align: center;
-            padding: 20px;
+            color: white;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            background: rgba(0,0,0,0.5);
+            padding: 10px 20px;
+            border-radius: 8px;
+            width: 90%;
         }
         section {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             padding: 20px;
         }
-        h1, h2 {
+        h2 {
             text-align: center;
             color: #4b5d52;
         }
@@ -34,25 +51,39 @@
             border-radius: 8px;
             margin-top: 20px;
         }
+        .tarifs ul {
+            padding-left: 20px;
+        }
         .whatsapp-btn {
             display: block;
             background-color: #25D366;
             color: white;
             text-align: center;
-            padding: 12px;
+            padding: 14px;
             text-decoration: none;
             border-radius: 8px;
             margin-top: 15px;
             font-weight: bold;
+            font-size: 1.1em;
         }
         .whatsapp-btn:hover {
             background-color: #1ebe57;
+        }
+        @media (max-width: 600px) {
+            section {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 1.6rem;
+                padding: 8px;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
+    <img src="https://images.pexels.com/photos/3865553/pexels-photo-3865553.jpeg" alt="Massage relaxant">
     <h1>Instant Détente – Massage Relaxant</h1>
 </header>
 
@@ -61,7 +92,6 @@
     <p>Je reçois en cabinet à Houilles et me déplace avec tout le nécessaire pour transformer votre espace en véritable bulle de bien-être.</p>
     <p>Massage relaxant sur-mesure – Ambiance zen (huiles, musique douce)</p>
     <p>Déplacement dans tout Paris & Île-de-France</p>
-    <p>Durée : 1h / 60€ (table de massage incluse)</p>
     <p><strong>Sur rendez-vous uniquement</strong></p>
 
     <div class="tarifs">
